@@ -8,6 +8,7 @@
   }else{
     $user_id = '';
   }
+  include 'important/add_cart.php';
 ?>
 
 <!DOCTYPE html>
