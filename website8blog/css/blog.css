@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root{
+   --main-color:#4834d4;
+   --red:#e74c3c;
+   --orange:#f39c12;
+   --black:#34495e;
+   --white:#fff;
+   --light-bg:#f5f5f5;
+   --light-color:#999;
+   --border:.2rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Montserrat', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: none; border:none;
+}
+*::selection{
+    color:var(--white);
+    background-color: var(--main-color);
+ }
+ 
+ ::-webkit-scrollbar{
+    width: 1rem;
+    height: .5rem;
+ }
+ 
+ ::-webkit-scrollbar-track{
+   background-color: none;
+ }
+ 
+ ::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+ }
+ 
+ html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+ 
+ body{
+    background-color: var(--light-bg);
+    padding-bottom: 7rem;
+    
+ }
+ 
+ section{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:2rem;
+ }
+ 
+ .btn,
+ .delete-btn,
+ .option-btn,
+ .inline-btn,
+ .inline-option-btn,
+ .inline-delete-btn{
+    margin-top: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color:var(--white);
+    padding:1.2rem 3rem;
+    text-transform: capitalize;
+    text-align: center;
+ }
+ 
+ .inline-btn,
+ .inline-option-btn,
+ .inline-delete-btn{
+    display: inline-block;
+    margin-right: 1rem;
+ }
+ 
+ .btn,
+ .delete-btn,
+ .option-btn{
+    display: block;
+    width: 100%;
+ }
+ 
+ .inline-btn,
+ .btn{
+    background-color: var(--main-color);
+ }
+ 
+ .inline-delete-btn,
+ .delete-btn{
+    background-color: var(--red);
+ }
+ 
+ .inline-option-btn,
+ .option-btn{
+    background-color: var(--orange);
+ }
+ 
+ .btn:hover,
+ .delete-btn:hover,
+ .option-btn:hover,
+ .inline-btn:hover,
+ .inline-delete-btn:hover,
+ .inline-option-btn:hover{
+    background-color: var(--black);
+ }
+ 
+ .flex-btn{
+    display: flex;
+    gap:1rem;
+ }
+ .heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    color:var(--black);
+    font-size: 3rem;
+ }
+ 
+ .empty{
+    border:var(--border);
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding:1.5rem;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color:var(--red);
+    box-shadow: var(--box-shadow);
+ }
+ .message{
+    position: sticky;
+    top:0;
+    margin:0 auto;
+    background-color: var(--white);
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    border-bottom:var(--border);
+ }
+ 
+ .message span{
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+ .message i{
+    font-size: 2.5rem;
+    color:var(--red);
+    cursor: pointer;
+ }
+ 
+ .message i:hover{
+    color:var(--black);
+ }
+ 
+ .header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-bottom: var(--border);
+ }
+
+ .header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1.5rem 2rem;
+
+ }
+ .header .flex .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+ }
+.header .flex .search-form{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    width: 50rem;
+    border: var(--border);
+}
+.header .flex .search-form input{
+    background: none;
+    width: 100%;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.header .flex .search-form button{
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+.header .flex .search-form button:hover{
+    color: var(--main-color);
+}
+.header .flex .icons div{
+    cursor: pointer;
+    height: 4.5rem;
+    width: 5rem;
+    line-height: 4.1rem;
+    border: var(--border);
+    background-color: var(--light-bg);
+    color: var(--black);
+    border-radius: .5rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-left: .7rem;
+}
+.header .fllex .icons div:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+#search-btn{
+    display: none;
+
+}
+.header .flex .navbar{
+    position: absolute;
+    top: 120%; right: 2rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    width: 30rem;
+    display: none;
+    animation: fadeIn .2s linear;
+}
+@keyframes fadeIn {
+    0%{
+        transform: translateY(2rem);
+    }
+}
+.header .flex .navbar.active{
+    display: block;
+}
+
+.header .flex .navbar a{
+    font-size: 2rem;
+    display: block;
+    padding: 1rem 0;
+}
+.header .flex .navbar a i{
+    color: var(--main-color);
+    margin-right: .7rem;
+    transition: .2s linear;
+}
+.header .flex .navbar a:hover i{
+    margin-right: 2rem;
+}
+.header .flex .navbar a span{
+    color: var(--light-color);
+}
+.header .flex .profile{
+   position: absolute;
+   top: 120%; right: 2rem;
+   border-radius: .5rem;
+   background-color: var(--white);
+   padding: 1rem;
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   width: 30rem;
+   text-align: center;
+   display: none;
+   animation: fadeIn .2s linear;
+}
+
+@keyframes fadeIn {
+   0%{
+       transform: translateY(2rem);
+   }
+}
+.header .flex .profile.active{
+   display: block;
+}
+.header .flex .profile p{
+   margin-bottom: .5rem;
+   font-size: 1.8rem;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   color: var(--light-color);
+}
+
+
+
+
+
+/* Mediaaa */
+
+@media (max-width : 991px){
+   html{
+      font-size: 55%;
+   }
+}
+
+@media (max-width  : 768px){
+   #search-btn{
+      display: inline-block;
+   }
+   .header .flex .search-form{
+      position: absolute;
+      top: 99%; left: 0; right: 0;
+      width: 100%;
+      border-right: none;
+      border-left: none;
+      border-radius: 0rem;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+   }
+   .header .flex .search-form.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+}
+
+@media (max-width  : 450px){
+   html{
+      font-size: 50%;
+   }
+}

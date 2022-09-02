@@ -53,6 +53,11 @@ if(isset($_POST['delete'])){
 
    <h1 class="heading">your posts</h1>
 
+   <form action="search_page.php" method="POST" class="search-form">
+      <input type="text" maxlength="100" required placeholder="Search Post...." name="search_box">
+      <button class="fas fa-search" name="search_btn"></button>
+   </form>
+
    <div class="box-container">
 
       <?php

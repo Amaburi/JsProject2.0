@@ -451,6 +451,36 @@ section{
    margin-right: .5rem;
 }
 
+.show-posts .search-form{
+   margin-bottom: 2.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   padding: 1.5rem;
+   border: var(--border);
+   gap: 1.5rem;
+}
+
+.show-posts .search-form input{
+   width: 100%;
+   font-size: 2rem;
+   color: var(--black);
+}
+.show-posts .search-form button{
+   cursor: pointer;
+   color: var(--black);
+   font-size: 2rem;
+   background: none;
+}
+.show-posts .search-form button:hover{
+   color: var(--main-color);
+}
+
+
+
 .accounts .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, 33rem);
@@ -626,9 +656,6 @@ section{
    margin:.5rem 0;
    border:var(--border);
 }
-
-
-
 
 
 

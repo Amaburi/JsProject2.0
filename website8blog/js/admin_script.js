@@ -7,3 +7,6 @@ menuu.onclick = () => {
 window.onscroll = () => {
     header.classList.toggle('active');
 }
+document.querySelectorAll('.posts-content').forEach(content => {
+    if(content.innerHTML.length > 100) content.innerHTML = content.innerHTML.slice(0, 100);
+});
