@@ -3,8 +3,7 @@ menuu = document.querySelector('#menu-btn'),
 profilee = document.querySelector('.header .flex .profile'),
 userbtn = document.querySelector('#user-btn'),
 search = document.querySelector('.header .flex .search-form'),
-searchbtn = document.querySelector('#search-btn'),
-postgrid = document.querySelectorAll('.posts-grid .box-container .box .content');
+searchbtn = document.querySelector('#search-btn');
 
 menuu.onclick = () =>{
     navbar.classList.toggle('active');
@@ -29,6 +28,3 @@ window.onscroll = () => {
     profilee.classList.remove('active');
     search.classList.remove('active');
 }
-postgrid.forEach(content =>{
-    if(content.innerHTML.length > 150) content.innerHTML = content.innerHTML.slice(0,150);
-})
