@@ -451,6 +451,41 @@
    color: var(--main-color);
 }
 
+.categories .box-container{
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   border: var(--border);
+   padding: 1rem 2rem;
+}
+.categories .box-container .box{
+   padding: 1rem 0;
+}
+.categories .box-container .box span{
+   display: inline-block;
+   margin-right: .5rem;
+   height: 4.5rem;
+   width: 5rem;
+   line-height: 4.5rem;
+   color: var(--light-color);
+   text-align: center;
+   font-size: 2rem;
+   background-color: var(--light-bg);
+   border: var(--border);
+   border-radius: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
