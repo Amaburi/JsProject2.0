@@ -82,6 +82,7 @@ a{
     font-size: 40px;
     cursor: pointer;
     z-index: 1000;
+    color: bisque;
 }
 @media (max-width:1200px){
     .container{
