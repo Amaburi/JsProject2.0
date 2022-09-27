@@ -117,7 +117,7 @@
     margin-bottom: 2rem;
     text-transform: capitalize;
     color:var(--black);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: normal;
  }
  
@@ -541,6 +541,301 @@
    font-size: 1.8rem;
    color: var(--black);
 }
+
+.post-grid form{
+   border: var(--border);
+   border-radius: .5rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   padding: 2rem;
+   overflow-x: hidden;
+}
+.post-grid form .image{
+   width: 100%;
+   object-fit: contain;
+   margin-top: .5rem;
+   border-radius: .5rem;
+   margin-bottom: 1.5rem;
+}
+.posts-grid form .admin{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin: .5rem 0;
+}
+.post-grid form .admin i{
+   height: 4.5rem;
+   width: 5rem;
+   border-radius: .5rem;
+   line-height: 4.2rem;
+   border: var(--border);
+   background-color: var(--light-bg);
+   font-size: 2rem;
+   color: var(--black);
+   text-align: center;
+   margin-bottom: .5rem;
+}
+.post-grid form .admin a p{
+   font-size: 1.8rem;
+   color: var(--main-color);
+}
+.post-grid form .admin a:hover{
+   color: var(--black);
+   text-decoration: underline;
+}
+.post-grid form .admin div{
+   margin-top: .2rem;
+   color: var(--light-color);
+   font-size: 1.5rem;
+}
+.post-grid form .title{
+   font-size: 2rem;
+   color: var(--black);
+   text-overflow: ellipsis;
+   word-wrap: nowrap;
+   overflow-x: hidden;
+}
+.post-grid form .content{
+   line-height: 1.5;
+   font-size: 1.8rem;
+   color: var(--light-color);
+   padding-bottom: .5rem;
+   padding-top: 1rem;
+   white-space: pre-line;
+}
+.post-grid form .content::After{
+   content: '....';
+}
+.post-grid form .category{
+   display: block;
+   margin-top: 2rem;
+   font-size: 2rem;
+}
+.post-grid form .category i{
+   margin-right: 1rem;
+   color: var(--main-color);
+}
+.post-grid form .category span{
+   color: var(--light-color);
+}
+.post-grid form .category:hover span{
+   color: var(--black);
+   text-decoration: underline;
+}
+.post-grid form .icons{
+   margin-top: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: .5rem;
+   border: var(--border);
+   background-color: var(--light-bg);
+   padding: 1.5rem;
+}
+
+.post-grid form .icons div{
+   font-size: 2rem;
+}
+
+.post-grid form .icons button{
+   background: none;
+   cursor: pointer;
+   font-size: 2rem;
+}
+
+.post-grid form .icons button:hover i{
+   color: var(--black);
+}
+
+.post-grid form .icons  i{
+   color: var(--light-color);
+   margin-right: .7rem;
+}
+.post-grid form .icons span{
+   color: form}
+
+
+.comments-container .comment-title{
+   border-top-left-radius: .5rem;
+   border-top-right-radius: .5rem;
+   background-color: var(--black);
+   font-size: 2rem;
+   color: var(--white);
+   padding:1.5rem 2rem;
+}
+
+.comments-container .add-comment{
+   border-bottom-left-radius: .5rem;
+   border-bottom-right-radius: .5rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   padding: 1.5rem;
+   margin-bottom: 2rem;
+}
+.comments-container p{
+   font-size: 2rem;
+   margin-bottom: 1rem;
+}
+.comments-container .add-comment p i{
+   margin-right: 1rem;
+   color: var(--light-color);
+}
+.comments-container .add-comment p a{
+   color: var(--main-color);
+}
+.comments-container .add-comment p a:hover{
+   text-decoration: underline;
+   color: var(--main-color);
+}
+.comments-container .add-comment .comment-box{
+   width: 100%;
+   height: 25rem;
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   padding: 1.5rem;
+   margin: .5rem 0;
+   font-size: 1.8rem;
+   color: var(--black);
+   resize: none;
+   border: var(--border);
+}
+.comments-container .add-comment textarea{
+   width: 100%;
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   padding:1.5rem 2rem;
+   margin:1rem 0;
+   border: var(--border);
+   font-size: 2rem;
+   color:var(--black);
+   height: 15rem;
+   resize:none;
+}
+
+.comments-container .user-comments-container{
+   display: grid;
+   gap:2.5rem;
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   padding:2rem;
+   background-color: var(--white);
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+}
+.comments-container .user-comments-container .show-comments{
+   margin-bottom: 1rem;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+.comments-container .user-comments-container .show-comments .post-title span{
+   color:var(--black);
+   line-height: 1.5;
+}
+
+.comments-container .user-comments-container .show-comments .post-title a{
+   color:var(--main-color);
+}
+
+.comments-container .user-comments-container .show-comments .post-title a:hover{
+   text-decoration: underline;
+}
+
+.comments-container .user-comments-container .show-comments .comment-user{
+   display: flex;
+   align-items: center;
+   gap:1rem;
+   margin-bottom: 1.5rem;
+}
+
+.comments-container .user-comments-container .show-comments .comment-user i{
+   text-align: center;
+   height: 5rem;
+   width: 5rem;
+   line-height: 4.7rem;
+   font-size: 2rem;
+   border:var(--border);
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   color:var(--black);
+}
+
+.comments-container .user-comments-container .show-comments .comment-user span{
+   font-size: 2rem;
+   color:var(--main-color);
+}
+
+.comments-container .user-comments-container .show-comments .comment-user div{
+   font-size: 1.5rem;
+   margin-top: .2rem;
+   color:var(--light-color);
+}
+
+.comments-container .user-comments-container .show-comments .comment-text{
+   line-height: 1.5;
+   font-size: 1.7rem;
+   color:var(--light-color);
+}
+
+.comments-container .user-comments-container .show-comments .comment-box{
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   padding:1.5rem 2rem;
+   font-size: 2rem;
+   color:var(--black);
+   width: 100%;
+   white-space: pre-line;
+   line-height: 1.5;
+   border: var(--border);
+}
+
+.comments-container .user-comments-container .show-comments textarea{
+   resize: none;
+   border:var(--border);
+}
+
+.comment-edit-form{
+   padding-bottom: 0;
+}
+
+.comment-edit-form p{
+   background-color: var(--black);
+   color:var(--white);
+   padding:1.5rem;
+   font-size: 2rem;
+   border-radius: .5rem;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+}
+
+.comment-edit-form form{
+   border-bottom-left-radius: .5rem;
+   border-bottom-right-radius: .5rem;
+   border:var(--border);
+   padding:2rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+}
+
+.comment-edit-form form textarea{
+   font-size: 2rem;
+   color:var(--black);
+   line-height: 1.5;
+   height: 15rem;
+   width: 100%;
+   resize: none;
+   background-color: var(--light-bg);
+   border:var(--border);
+   border-radius: .5rem;
+   padding:1.5rem;
+   margin-bottom: .5rem;
+}
+
+
+
+
+
 
 
 

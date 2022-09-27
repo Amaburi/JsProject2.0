@@ -16,6 +16,7 @@ if(isset($_GET['author'])){
     $author = '';
 }
 
+@include 'important/like_post.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ if(isset($_GET['author'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Category</title>
+   <title>Author Posts</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -58,6 +59,9 @@ if(isset($_GET['author'])){
         $count_post_likes = $conn->prepare("SELECT * FROM `likes` WHERE post_id = ?");
         $count_post_likes->execute([$post_id]);
         $total_post_likes = $count_post_likes->rowCount();
+
+        $confirm_likes = $conn->prepare("SELECT * FROM `likes` WHERE user_id = ? AND post_id = ?");
+        $confirm_likes->execute([$user_id, $post_id]);
      
    ?>
    <form action="" method="POST" class="box">
@@ -83,7 +87,7 @@ if(isset($_GET['author'])){
 
      <div class="icons">
        <a href="view_post.php?post_id=<?= $post_id; ?>"><i class="fas fa-comment"></i><span><?= $total_post_comments; ?></span></a>
-       <button type="submit" name="like_post"><i class="fas fa-heart"></i><span><?= $total_post_likes ?></span></button>
+       <button type="submit" name="like_post"><i class="fas fa-heart" style="<?php if($confirm_likes->rowCount() > 0){echo 'color:var(--red);';} ?>"></i><span><?= $total_post_likes ?></span></button>
      </div>
      <div class="title"><?= $fetch_posts['title']; ?></div>
      <div class="content"><?= $fetch_posts['content']; ?></div>

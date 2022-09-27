@@ -55,6 +55,9 @@ include 'important/like_post.php';
         $count_post_likes = $conn->prepare("SELECT * FROM `likes` WHERE post_id = ?");
         $count_post_likes->execute([$post_id]);
         $total_post_likes = $count_post_likes->rowCount();
+
+        $confirm_likes = $conn->prepare("SELECT * FROM `likes` WHERE user_id = ? AND post_id = ?");
+        $confirm_likes->execute([$user_id, $post_id]);
      
    ?>
    <form action="" method="POST" class="box">
@@ -80,7 +83,7 @@ include 'important/like_post.php';
 
      <div class="icons">
        <a href="view_post.php?post_id=<?= $post_id; ?>"><i class="fas fa-comment"></i><span><?= $total_post_comments; ?></span></a>
-       <button type="submit" name="like_post"><i class="fas fa-heart"></i><span><?= $total_post_likes ?></span></button>
+       <button type="submit" name="like_post"><i class="fas fa-heart" style="<?php if($confirm_likes->rowCount() > 0){echo 'color:var(--red);';} ?>"></i><span><?= $total_post_likes ?></span></button>
      </div>
      <div class="title"><?= $fetch_posts['title']; ?></div>
      <div class="content"><?= $fetch_posts['content']; ?></div>
