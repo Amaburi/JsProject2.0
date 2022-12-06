@@ -341,7 +341,7 @@
 
 .posts-grid .box-container{
    columns: 3 30rem;
-   gap: 2rem;
+   gap: 1rem;
 }
 .posts-grid .box-container .box{
    margin-bottom: 2rem;

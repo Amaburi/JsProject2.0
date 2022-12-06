@@ -32,12 +32,13 @@ include 'important/like_post.php';
    
 <?php include 'important/user_header.php'; ?>
 
+<?php
+   
+?>
 <section class="posts-grid">
+  <h1 class="heading">Category</h1>
 
-   <h1 class="heading">latest posts</h1>
-
-   <div class="box-container">
-
+ <div class="box-container">
       <?php
          $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE status = ?");
          $select_posts->execute(['active']);
@@ -57,7 +58,7 @@ include 'important/like_post.php';
                $confirm_likes = $conn->prepare("SELECT * FROM `likes` WHERE user_id = ? AND post_id = ?");
                $confirm_likes->execute([$user_id, $post_id]);
       ?>
-      <form  method="post" class="box">
+      <form class="box" method="post">
          <input type="hidden" name="post_id" value="<?= $post_id; ?>">
          <input type="hidden" name="admin_id" value="<?= $fetch_posts['admin_id']; ?>">
          <div class="post-admin">
@@ -91,10 +92,12 @@ include 'important/like_post.php';
          echo '<p class="empty">no posts added yet!</p>';
       }
       ?>
-   </div>
 
+ </div>
 </section>
 
+<?php
+?>
 
 
 
@@ -113,7 +116,9 @@ include 'important/like_post.php';
 
 
 
-<?php include 'important/footer.php'; ?>
+
+
+
 
 <script src="js/blog.js"></script>
 

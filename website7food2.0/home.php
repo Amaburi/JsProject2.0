@@ -37,33 +37,33 @@
                <div class="swiper-slide slide">
                   <div class="content">
                      <span>order online</span>
-                     <h3>delicious pizza</h3>
+                     <h3>StrawBerry Cake</h3>
                      <a href="menu.php" class="btn">see menus</a>
                   </div>
                   <div class="image">
-                     <img src="images/home-img-1.png" alt="">
+                     <img src="images/strawberry.png" alt="">
                   </div>
                </div>
       
                <div class="swiper-slide slide">
                   <div class="content">
                      <span>order online</span>
-                     <h3>double hamburger</h3>
+                     <h3>White Chocolate Almond</h3>
                      <a href="menu.php" class="btn">see menus</a>
                   </div>
                   <div class="image">
-                     <img src="images/home-img-2.png" alt="">
+                     <img src="images/cakeee.png" alt="">
                   </div>
                </div>
       
                <div class="swiper-slide slide">
                   <div class="content">
                      <span>order online</span>
-                     <h3>roasted chicken</h3>
+                     <h3>Ultimate Cake</h3>
                      <a href="menu.php" class="btn">see menus</a>
                   </div>
                   <div class="image">
-                     <img src="images/home-img-3.png" alt="">
+                     <img src="images/cake.png" alt="">
                   </div>
                </div>
                <div class="swiper-pagination"></div>

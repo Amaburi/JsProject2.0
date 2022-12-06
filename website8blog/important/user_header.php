@@ -12,7 +12,7 @@ if(isset($message)){
 ?>
 <header class="header">
     <section class="flex">
-        <a href="home.php" class="logo">L</a>
+        <a href="home.php" class="logo">Jy</a>
         <form action="search.php" class="search-form" method="post">
             <input type="text" name="search_box" placeholder="Search Post..." maxlength="100">
             <button type="submit" name="search_btn" class="fas fa-search"></button>

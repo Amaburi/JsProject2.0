@@ -111,7 +111,7 @@
 
  <div class="box-container">
    <?php 
-     $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE status = ? LIMIT 6");
+     $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE status = ? LIMIT 1");
      $select_posts->execute(['active']);
      if($select_posts->rowCount() > 0){
        while($fetch_posts = $select_posts->fetch(PDO::FETCH_ASSOC)){

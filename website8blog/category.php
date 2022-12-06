@@ -44,7 +44,7 @@ if(isset($_GET['category'])){
 
  <div class="box-container">
    <?php 
-     $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE category =? AND status = ? LIMIT 6");
+     $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE category =? AND status = ? ");
      $select_posts->execute([$category,'active']);
      if($select_posts->rowCount() > 0){
        while($fetch_posts = $select_posts->fetch(PDO::FETCH_ASSOC)){
@@ -98,17 +98,6 @@ if(isset($_GET['category'])){
    }
    ?>
 
- </div>
- <div class="comemnt-title">User Comments</div>
- 
- <div class="show-comments">
-  <?php 
-    $select_comments = $conn->prepare("SELECT * FROM `comments` WHERE post_id =?");
-    $select_comments->execute([$get_id]);
-    if($select_comments->rowCount() > 0){
-      
-    }   
-  ?>
  </div>
 </section>
 
