@@ -4,7 +4,7 @@
 
    <nav class="navbar nav-1">
       <section class="flex">
-         <a href="home.php" class="logo"><i class="fas fa-house"></i>MyHome</a>
+         <a href="home.php" class="logo"><i class="fas fa-house"></i>Jy</a>
 
          <ul>
             <li><a href="post_property.php">post property<i class="fas fa-paper-plane"></i></a></li>

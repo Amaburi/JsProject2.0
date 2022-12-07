@@ -1,6 +1,6 @@
 <?php
 
-   $db_name = 'mysql:host=localhost;dbname=home_db';
+   $db_name = 'mysql:host=localhost;dbname=realestatewebsite';
    $db_user_name = 'root';
    $db_user_pass = '';
 
